@@ -51,7 +51,7 @@ abstract class AbstractEventDispatcher implements SymfonyDispatcher
      */
     public function dispatch($eventName, Event $event = null)
     {
-        if ($event == null) {
+        if ($event === null) {
             $event = new Event();
         }
 

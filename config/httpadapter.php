@@ -66,5 +66,4 @@ return [
             'adapter'   => 'curl'
         ]
     ]
-
 ];

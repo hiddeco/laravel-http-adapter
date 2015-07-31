@@ -1,5 +1,11 @@
 Laravel HTTP Adapter
 ====================
+[![Build Status](https://scrutinizer-ci.com/g/hiddeco/laravel-http-adapter/badges/build.png?b=master)](https://scrutinizer-ci.com/g/hiddeco/laravel-http-adapter/build-status/master)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/hiddeco/laravel-http-adapter/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/hiddeco/laravel-http-adapter/?branch=master)
+[![MIT license](http://img.shields.io/badge/license-MIT-brightgreen.svg)](http://opensource.org/licenses/MIT)
+[![StyleCI](https://styleci.io/repos/40020790/shield)](https://styleci.io/repos/40020790)
+[![SensioLabsInsight](https://insight.sensiolabs.com/projects/662defed-ce7c-404c-9877-e70b7b624347/mini.png)](https://insight.sensiolabs.com/projects/662defed-ce7c-404c-9877-e70b7b624347)
+
 Laravel HTTP Adapter is an [Ivory HTTP Adapter](https://github.com/egeloen/ivory-http-adapter) bridge, which
 integrates the ability of using multiple adapters with their own configuration through one API.
 

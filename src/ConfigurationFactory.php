@@ -39,7 +39,7 @@ class ConfigurationFactory
      */
     public function create(array $config)
     {
-        foreach($config as $key => $value) {
+        foreach ($config as $key => $value) {
             $this->configuration->{$this->getMethod($key)}($value);
         }
 

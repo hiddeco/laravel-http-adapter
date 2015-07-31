@@ -51,7 +51,6 @@ class HttpAdapterFactory
         $this->eventDispatcher = $eventDispatcher;
     }
 
-
     /**
      * Make a new Ivory HTTP adapter instance.
      *
@@ -63,12 +62,12 @@ class HttpAdapterFactory
     {
         $adapter = $this->createAdapter($config);
 
-        if(is_array($parameters = array_get($config, 'config'))) {
+        if (is_array($parameters = array_get($config, 'config'))) {
             $configuration = $this->createConfiguration($parameters);
             $adapter->setConfiguration($configuration);
         }
 
-        if(array_get($config, 'eventable', false)) {
+        if (array_get($config, 'eventable', false)) {
             return new EventDispatcherHttpAdapter($adapter, $this->eventDispatcher);
         }
 
@@ -86,7 +85,6 @@ class HttpAdapterFactory
     {
         return $this->adapter->create($config['adapter']);
     }
-
 
     /**
      * Establish an configuration.

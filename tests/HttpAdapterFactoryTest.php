@@ -27,7 +27,7 @@ class HttpAdapterFactoryTest extends AbstractTestBenchTestCase
     public function testMake()
     {
         $config = [
-            'adapter' => 'curl'
+            'adapter' => 'curl',
         ];
 
         $manager = Mockery::mock(HttpAdapterManager::class);
@@ -44,8 +44,8 @@ class HttpAdapterFactoryTest extends AbstractTestBenchTestCase
         $config = [
             'adapter' => 'curl',
             'config'  => [
-                'timeout' => 10
-            ]
+                'timeout' => 10,
+            ],
         ];
 
         $manager = Mockery::mock(HttpAdapterManager::class);
@@ -77,8 +77,8 @@ class HttpAdapterFactoryTest extends AbstractTestBenchTestCase
             'adapter'   => 'curl',
             'eventable' => true,
             'config'    => [
-                'timeout' => 20
-            ]
+                'timeout' => 20,
+            ],
         ];
 
         $manager = Mockery::mock(HttpAdapterManager::class);

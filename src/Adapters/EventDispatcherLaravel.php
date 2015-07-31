@@ -11,8 +11,8 @@
 
 namespace HiddeCo\HttpAdapter\Adapters;
 
-use Symfony\Component\EventDispatcher\EventDispatcherInterface as SymfonyDispatcher;
 use Illuminate\Contracts\Events\Dispatcher as LaravelDispatcher;
+use Symfony\Component\EventDispatcher\EventDispatcherInterface as SymfonyDispatcher;
 
 /**
  * This adapter provides a Laravel integration for applications

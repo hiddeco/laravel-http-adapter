@@ -29,7 +29,6 @@ class HttpAdapterServiceProvider extends ServiceProvider
         $this->mergeConfig();
     }
 
-
     /**
      * Merge the config files.
      *
@@ -37,10 +36,10 @@ class HttpAdapterServiceProvider extends ServiceProvider
      */
     protected function mergeConfig()
     {
-        $src = realpath(__DIR__ . '/../config/httpadapter.php');
+        $src = realpath(__DIR__.'/../config/httpadapter.php');
 
         if (class_exists('Illuminate\Foundation\Application', false)) {
-            $this->publishes([ $src => config_path('httpadapter.php') ]);
+            $this->publishes([$src => config_path('httpadapter.php')]);
         }
 
         $this->mergeConfigFrom($src, 'httpadapter');
@@ -175,7 +174,7 @@ class HttpAdapterServiceProvider extends ServiceProvider
             'httpadapter.configurationfactory',
             'httpadapter.factory',
             'httpadapter',
-            'httpadapter.connection'
+            'httpadapter.connection',
         ];
     }
 }

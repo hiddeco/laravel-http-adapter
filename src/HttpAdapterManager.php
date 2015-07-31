@@ -73,7 +73,7 @@ class HttpAdapterManager extends AbstractManager
         $connections = $this->config->get($this->getConfigName().'.connections');
 
         if (!is_array($config = array_get($connections, $name)) && !$config) {
-            throw new \InvalidArgumentException(sprintf("Adapter [%s] is not configured", $name));
+            throw new \InvalidArgumentException(sprintf('Adapter [%s] is not configured', $name));
         }
 
         $config = array_merge($config, $this->getGlobalConfig());
@@ -92,7 +92,7 @@ class HttpAdapterManager extends AbstractManager
     {
         $global = array_only($this->config->get($this->getConfigName().'.global'), ['eventable', 'config']);
 
-        if(array_key_exists('config', $global)) {
+        if (array_key_exists('config', $global)) {
             $global['config'] = array_only($global['config'], [
                 'protocol_version',
                 'keep_alive',
@@ -100,7 +100,7 @@ class HttpAdapterManager extends AbstractManager
                 'boundary',
                 'timeout',
                 'user_agent',
-                'base_uri'
+                'base_uri',
             ]);
         }
 
@@ -108,10 +108,10 @@ class HttpAdapterManager extends AbstractManager
     }
 
     /**
-    * Get the factory instance.
-    *
-    * @return \HiddeCo\HttpAdapter\HttpAdapterFactory
-    */
+     * Get the factory instance.
+     *
+     * @return \HiddeCo\HttpAdapter\HttpAdapterFactory
+     */
     public function getFactory()
     {
         return $this->factory;

@@ -20,7 +20,7 @@ return [
             // 'timeout' => 10,
             // 'user_agent' => 'Laravel HTTP Adapter',
             // 'base_uri' => 'https://github.com/hiddeco'
-        ]
+        ],
     ],
 
     /*
@@ -59,11 +59,11 @@ return [
                 // 'timeout' => 10,
                 // 'user_agent' => 'Laravel HTTP Adapter',
                 // 'base_uri' => 'https://github.com/hiddeco'
-            ]
+            ],
         ],
 
         'alternative' => [
-            'adapter'   => 'curl'
-        ]
-    ]
+            'adapter'   => 'curl',
+        ],
+    ],
 ];

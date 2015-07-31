@@ -12,8 +12,8 @@
 namespace HiddeCo\HttpAdapter\Adapters;
 
 use Symfony\Component\EventDispatcher\Event;
-use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 use Symfony\Component\EventDispatcher\EventDispatcherInterface as SymfonyDispatcher;
+use Symfony\Component\EventDispatcher\EventSubscriberInterface;
 
 /**
  * This adapter provides a Laravel integration for applications
@@ -95,7 +95,7 @@ abstract class AbstractEventDispatcher implements SymfonyDispatcher
     /**
      * Removes an event listener from the specified events.
      *
-     * @param string   $eventName The event to remove a listener from
+     * @param string   $eventName           The event to remove a listener from
      * @param callable $listenerToBeRemoved The listener to remove
      */
     public function removeListener($eventName, $listenerToBeRemoved)

@@ -12,7 +12,6 @@
 namespace HiddeCo\Tests\HttpAdapter;
 
 use GrahamCampbell\TestBenchCore\ServiceProviderTrait;
-use HiddeCo\HttpAdapter\Adapters\AbstractEventDispatcher;
 use HiddeCo\HttpAdapter\ConfigurationFactory;
 use HiddeCo\HttpAdapter\HttpAdapterFactory;
 use HiddeCo\HttpAdapter\HttpAdapterManager;

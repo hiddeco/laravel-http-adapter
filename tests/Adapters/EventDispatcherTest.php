@@ -26,8 +26,9 @@ class EventDispatcherTest extends AbstractEventDispatcherTest
 
     protected function createEventDispatcher()
     {
-        $this->laravelDispatcher = new LaravelDispatcher;
-        $this->symfonyDispatcher = new SymfonyDispatcher;
+        $this->laravelDispatcher = new LaravelDispatcher();
+        $this->symfonyDispatcher = new SymfonyDispatcher();
+
         return new AdapterDispatcher(
             $this->laravelDispatcher,
             $this->symfonyDispatcher
@@ -46,8 +47,8 @@ class EventDispatcherTest extends AbstractEventDispatcherTest
 
     public function testItKnowsIfTheLaravelDispatcherHasListeners()
     {
-        $this->laravelDispatcher->listen('pre.foo', function() {});
-        $this->laravelDispatcher->listen('post.foo', function() {});
+        $this->laravelDispatcher->listen('pre.foo', function () {});
+        $this->laravelDispatcher->listen('post.foo', function () {});
         $this->assertTrue($this->dispatcher->hasListeners('pre.foo'));
         $this->assertTrue($this->dispatcher->hasListeners('post.foo'));
     }
@@ -81,7 +82,7 @@ class EventDispatcherTest extends AbstractEventDispatcherTest
     public function testEventReceivesTheDispatcherInstanceAsArgument()
     {
         $listener = new TestWithDispatcher();
-        $this->dispatcher->addListener('test', array($listener, 'foo'));
+        $this->dispatcher->addListener('test', [$listener, 'foo']);
         $this->assertNull($listener->name);
         $this->assertNull($listener->dispatcher);
         $this->dispatcher->dispatch('test');

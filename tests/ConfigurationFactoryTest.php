@@ -22,7 +22,7 @@ class ConfigurationFactoryTest extends AbstractTestBenchTestCase
     public function testCreate()
     {
         $config = [
-            'base_uri' => 'http://test.com'
+            'base_uri' => 'http://test.com',
         ];
 
         $factory = $this->getMockedFactory($config);
